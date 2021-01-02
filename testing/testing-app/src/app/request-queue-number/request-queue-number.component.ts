@@ -26,7 +26,7 @@ export class RequestQueueNumberComponent implements OnInit {
 
   getBarcodeData() {
     let barcode = ''
-    barcode += this.lastVisitor[0].id
+    barcode += this.lastVisitor[0].queueNumber
     barcode += ' '
     barcode += this.lastVisitor[0].name
     return barcode
