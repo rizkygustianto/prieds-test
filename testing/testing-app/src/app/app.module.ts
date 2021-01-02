@@ -11,6 +11,7 @@ import { MenuComponent } from './menu/menu.component';
 import { MaterialModule } from './tools/material.module';
 import { APP_BASE_HREF } from '@angular/common';
 import { VisitorListComponent } from './visitor-list/visitor-list.component';
+import { NgxBarcode6Module } from 'ngx-barcode6';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { VisitorListComponent } from './visitor-list/visitor-list.component';
     MaterialModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxBarcode6Module
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },

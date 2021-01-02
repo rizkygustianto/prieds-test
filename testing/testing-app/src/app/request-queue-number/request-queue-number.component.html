@@ -3,4 +3,10 @@
     <h1 class="display-1 my-3 text-center">{{ lastVisitor[0].id }}</h1>
     <h2 class="my-3 text-center">Nama: {{ lastVisitor[0].name }}</h2>
     <h3 class="my-3 text-center">No. Telp: {{ lastVisitor[0].phone_number }}</h3>
+    <ngx-barcode6
+        [bc-format]="'CODE128'"
+        [bc-value]="barcode"
+        [bc-display-value]="false"
+        class="text-center"
+    ></ngx-barcode6>>
 </div>

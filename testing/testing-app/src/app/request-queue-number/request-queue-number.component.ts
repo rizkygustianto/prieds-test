@@ -10,6 +10,7 @@ import { VisitorService } from '../visitor.service';
 export class RequestQueueNumberComponent implements OnInit {
 
   lastVisitor:Visitor;
+  barcode:string;
 
   constructor(private visitorService:VisitorService) { }
 
@@ -17,8 +18,18 @@ export class RequestQueueNumberComponent implements OnInit {
     this.visitorService.getLastVisitor().subscribe(visitor => {
       this.lastVisitor = visitor
       console.log(this.lastVisitor);
-      
+      this.barcode = this.getBarcodeData()
+      console.log(this.barcode);
     })
+    
+  }
+
+  getBarcodeData() {
+    let barcode = ''
+    barcode += this.lastVisitor[0].id
+    barcode += ' '
+    barcode += this.lastVisitor[0].name
+    return barcode
   }
 
 }
